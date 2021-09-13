@@ -49,7 +49,7 @@ def main():
         # Display Figure
         plt.plot(x, y, marker='o')
         plt.title("3n+1 Conjecture", fontsize=20)
-        plt.xlabel("Step Size / Iteration", fontsize=16)
+        plt.xlabel("Step / Iteration", fontsize=16)
         plt.ylabel("Number (n)", fontsize=16)
         plt.show()
 
