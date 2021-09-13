@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def main():
-    n_value = int(input("Enter a natural number (1-1,000,000): "))
+    initial_value = str(input("Enter a natural number (1-1,000,000): "))
+    n_value = int(initial_value)
 
     if n_value <= 1000000 and n_value > 1:
         x = [1]             # x-axis
@@ -61,7 +62,7 @@ def main():
         
         # Save Figure
         fig = plt.gcf()
-        fig.savefig('3nPlus1_graph.png')
+        fig.savefig(initial_value + '_graph.png')
     else:
         print("You have entered an invalid value.")
 
