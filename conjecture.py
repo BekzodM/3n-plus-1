@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def conjecture_sequence(n_value, y_list, x_list):
+    # While input value (n) is more than one the value will get:
+    #   divided by 2 if n is even.
+    #   If n is odd, n will get multiplied by 3 and added to 1.
     y_list.append(n_value)
     while n_value > 1:
         if n_value % 2 == 0:
@@ -12,28 +15,15 @@ def conjecture_sequence(n_value, y_list, x_list):
             y_list.append(n_value)
         x_list.append(x_list[-1] + 1)
 
-def main():
-    initial_value = str(input("Enter a natural number (1-1,000,000): "))
-    n_value = int(initial_value)
 
-    if n_value <= 1000000 and n_value > 1:
+def main():
+    initial_value = int(input("Enter a natural number (1-1,000,000): "))
+
+    if initial_value <= 1000000 and initial_value > 1:
         x = [1]             # x-axis
         y = []              # y-axis
         plt.figure(figsize=(15, 15), dpi=300)
-        #y.append(n_value)
-
-        # While input value (n) is more than one the value will get:
-        #   divided by 2 if n is even.
-        #   If n is odd, n will get multiplied by 3 and added to 1.
-        # while n_value > 1:
-        #     if n_value % 2 == 0:
-        #         n_value = n_value // 2
-        #         y.append(n_value)
-        #     else:
-        #         n_value = 3 * n_value + 1
-        #         y.append(n_value)
-        #     x.append(x[-1] + 1)
-        conjecture_sequence(int(initial_value),y,x)
+        conjecture_sequence(initial_value,y,x)
         
         # Set the x-axis tick interval
         if x[-1] >=50:
@@ -74,7 +64,7 @@ def main():
         
         # Save Figure
         fig = plt.gcf()
-        fig.savefig(initial_value + '_graph.png')
+        fig.savefig(str(initial_value) + '_graph.png')
     else:
         print("You have entered an invalid value.")
 
