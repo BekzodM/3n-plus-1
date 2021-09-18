@@ -1,6 +1,17 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+def conjecture_sequence(n_value, y_list, x_list):
+    y_list.append(n_value)
+    while n_value > 1:
+        if n_value % 2 == 0:
+            n_value = n_value // 2
+            y_list.append(n_value)
+        else:
+            n_value = 3 * n_value + 1
+            y_list.append(n_value)
+        x_list.append(x_list[-1] + 1)
+
 def main():
     initial_value = str(input("Enter a natural number (1-1,000,000): "))
     n_value = int(initial_value)
@@ -9,19 +20,20 @@ def main():
         x = [1]             # x-axis
         y = []              # y-axis
         plt.figure(figsize=(15, 15), dpi=300)
-        y.append(n_value)
+        #y.append(n_value)
 
         # While input value (n) is more than one the value will get:
         #   divided by 2 if n is even.
         #   If n is odd, n will get multiplied by 3 and added to 1.
-        while n_value > 1:
-            if n_value % 2 == 0:
-                n_value = n_value // 2
-                y.append(n_value)
-            else:
-                n_value = 3 * n_value + 1
-                y.append(n_value)
-            x.append(x[-1] + 1)
+        # while n_value > 1:
+        #     if n_value % 2 == 0:
+        #         n_value = n_value // 2
+        #         y.append(n_value)
+        #     else:
+        #         n_value = 3 * n_value + 1
+        #         y.append(n_value)
+        #     x.append(x[-1] + 1)
+        conjecture_sequence(int(initial_value),y,x)
         
         # Set the x-axis tick interval
         if x[-1] >=50:
