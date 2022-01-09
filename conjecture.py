@@ -22,7 +22,7 @@ def main():
     if initial_value <= 1000000 and initial_value > 1:
         x = [1]             # x-axis
         y = []              # y-axis
-        plt.figure(figsize=(15, 15), dpi=300)
+        plt.figure(figsize=(10, 10), dpi=250)
         conjecture_sequence(initial_value,y,x)
         
         # Set the x-axis tick interval
@@ -51,9 +51,9 @@ def main():
         
         # Display Figure
         plt.plot(x, y, marker='o')
-        plt.title("3n+1 Conjecture", fontsize=20)
-        plt.xlabel("Step / Iteration", fontsize=16)
-        plt.ylabel("Number (n)", fontsize=16)
+        plt.title("3n+1 Conjecture", fontsize=16)
+        plt.xlabel("Step / Iteration", fontsize=12)
+        plt.ylabel("Number (n)", fontsize=12)
 
         # Print sequence
         print("Sequence:")
