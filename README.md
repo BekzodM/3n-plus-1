@@ -22,7 +22,7 @@ Simply double-click
 First check if you already have Python installed in your system.  
 Windows/MacOS/Linux: Open your command prompt/terminal and type 
 ```
-python --version
+python3 --version
 ```
 If it outputs a Python version (ex: "Python 3.7.3"), then your system already has Python and you can skip the "Installing Python" step.  
 If you do not have Python, download the latest Python installer from [here](https://www.python.org/downloads/) for your OS.  
@@ -62,6 +62,6 @@ Once you have everything set up and your virtual environment is active and in th
 python conjecture.py
 ```
 The rest is simple!  
-You should be asked to enter a number, so enter some number and press 'Enter'  
-A graph will appear with the values of the 3n+1 (collatz) conjecture based on your entered number.  
-Once you exit from the graph window, your command prompt will print all the values of the conjecture and other information.
+You should be asked to enter a number, so enter a valid number and press 'Enter'  
+Your command prompt will print all the values of the conjecture and other information. Then a graph will appear with the values of the 3n+1 (collatz) conjecture based on your entered number.  
+Don't worry an image of the graph is also saved in the same folder as your script. The name of this image file will correspond to the number you entered in the beginning. 
