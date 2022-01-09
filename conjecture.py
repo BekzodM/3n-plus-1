@@ -54,7 +54,6 @@ def main():
         plt.title("3n+1 Conjecture", fontsize=20)
         plt.xlabel("Step / Iteration", fontsize=16)
         plt.ylabel("Number (n)", fontsize=16)
-        plt.show()
 
         # Print sequence
         print("Sequence:")
@@ -65,6 +64,7 @@ def main():
         # Save Figure
         fig = plt.gcf()
         fig.savefig(str(initial_value) + '_graph.png')
+        plt.show()
     else:
         print("You have entered an invalid value.")
 
